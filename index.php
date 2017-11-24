@@ -1,8 +1,6 @@
 <?php
 session_start();
-if (isset($_SESSION['logged']) === FALSE) {
-  header("Location: login.php");
-}
+require 'conexion.php';
 $usuario = $_SESSION['usuario'];
 $contrasena = $_SESSION['contrasena'];
 ?>
@@ -15,6 +13,7 @@ $contrasena = $_SESSION['contrasena'];
   <link rel="shortcut icon" href="https://www.unam.mx/sites/default/files/favicon_0.ico" type="image/vnd.microsoft.icon" />
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/sites/all/themes/unam/apple_icon.png" /> 
   <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" type="text/css" href="css/estilos.css">
   <link rel="stylesheet" href="css/uikit.css">
   <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">  
@@ -48,9 +47,8 @@ $contrasena = $_SESSION['contrasena'];
           <div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked" id="tuckedMenu">
               <div class="custom-menu-screen"></div>
               <ul class="pure-menu-list">
-                  <li class="pure-menu-item"><a href="#" data-reveal-id="Reg" class="pure-menu-link">Registrarse</a></li>
-                  <li class="pure-menu-item"><a href="#" data-reveal-id="Log" class="pure-menu-link">Iniciar Sesión</a></li>
-                  <li class="pure-menu-item"><a href="mailto:rmayett@comunidad.unam.mx?Subject=Soporte%20Asesorias" class="pure-menu-link"><i class="fa fa-inbox"></i>Contacto</a></li>
+                  <li class="pure-menu-item"><a href="register.php" class="pure-menu-link">Registrarse</a></li>
+                  <li class="pure-menu-item"><a href="login.php" class="pure-menu-link">Iniciar Sesión</a></li>               
               </ul>
           </div>
       </div>
@@ -65,31 +63,24 @@ $contrasena = $_SESSION['contrasena'];
        <div class="large-12 columns">
           <div class="row">
             <div class="large-3 small-6 columns">
-               <a href="#" data-reveal-id="Ciencias"> <img src="img/cb.jpg" data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true}"/></a>
+               <a href="#" data-reveal-id="Ciencias"> <img src="img/cb.jpg" class="pure-img-responsive" data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true}"/></a>
                 <h6 class="panel"><a href="#" data-reveal-id="Ciencias" data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true}">Ciencias Básicas</a></h6>
             </div>
             <div class="large-3 small-6 columns">
-              <a href="#" data-reveal-id="Prog"> <img src="img/prog.jpg" data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true}"/></a>             
+              <a href="#" data-reveal-id="Prog"> <img src="img/prog.jpg" class="pure-img-responsive" data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true}"/></a>             
              <h6 class="panel"><a href="#" data-reveal-id="Prog" data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true}">Programación</a></h6>
             </div>
             <div class="large-3 small-6 columns">
-              <a href="#" data-reveal-id="Elec"> <img src="img/elec.jpg" data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true}"/></a>              
+              <a href="#" data-reveal-id="Elec"> <img src="img/elec.jpg" class="pure-img-responsive" data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true}"/></a>              
               <h6 class="panel"><a href="#" data-reveal-id="Elec" data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true}">Electrónica</a></h6>
             </div>
             <div class="large-3 small-6 columns">
-            <a href="#" data-reveal-id="CH"> <img src="img/ch.jpg" data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true}"/></a>             
+            <a href="#" data-reveal-id="CH"> <img src="img/ch.jpg" class="pure-img-responsive" data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true}"/></a>             
              <h6 class="panel"><a href="#" data-reveal-id="CH" data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true}">Ciencias y Humanidades</a></h6>
             </div>
           </div>
         </div>
       </div>
-<center>
-<div class="row">
-      <h1 class="content-head is-center" data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true}">¿Donde encontrarnos?</h1>
-      <hr>
-      <div id="map" data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true}"></div>
-    </div>
-</center>
 <div class="content">
         <h2 class="content-head is-center" data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true}">Información de Contacto.</h2>
               <hr>
@@ -99,8 +90,8 @@ $contrasena = $_SESSION['contrasena'];
                 <a href="mailto:rmayett@comunidad.unam.mx?Subject=Soporte%20Asesorias" class="pure-menu-link"><img src="img/ro.jpg" alt="" name="aboutme" width="140" height="140" class="img-circle" data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true}" /> </a>
                 <dl>
                   <dt data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true}">Rodrigo Mayett Guzmán</dt>
-                  <a href="mailto:#@comunidad.unam.mx?Subject=Soporte%20Asesorias" class="pure-menu-link"><img src="img/ge.jpg" alt="" name="aboutme" width="140" height="140" class="img-circle" data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true}" /> </a>
-                  <dt data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true}">Gerardo Castillo</dt>
+                  <a href="mailto:ferrari_gerardo@live.com.mx?Subject=Soporte%20Asesorias" class="pure-menu-link"><img src="img/ge.jpg" alt="" name="aboutme" width="140" height="140" class="img-circle" data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true}" /> </a>
+                  <dt data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true}">Gerardo Castillo Duran</dt>
                   <dd></dd>
                 </dl>
               </p>
@@ -110,10 +101,8 @@ $contrasena = $_SESSION['contrasena'];
 
             <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
 
-                <h4 data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true}">Mas Información</h4>
-                <p data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true}">
-                    Datos 
-                </p>
+                <h3 data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true}">¿Donde encontrarnos?</h3>
+                <div id="map" data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true}"></div>               
                 <h4 data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true}">Siguenos</h4>
                 <div class="col-md-12">
                           <ul class="social-network social-circle">
@@ -140,42 +129,6 @@ $contrasena = $_SESSION['contrasena'];
 </div>
 
 </div>
-<!-- Modals Registro -->
-<div id="Reg" class="reveal-modal small" data-reveal aria-labelledby="RegTitle" aria-hidden="true" role="dialog">
-  <h3 id="RegTitle">Registro</h3>
-  <hr>
-  <center>
-  <img src="img/reg.png" alt="" width="100" height="100" class="img-circle" />
-  <form>
-  <div>    
-    <label>Correo</label>
-    <input type="text" id="sign-in-form-correo">
-    <label>Usuario</label>
-    <input type="text" id="sign-in-form-user">
-    <label>Generación </label>
-    <input type="text" id="sign-in-form-generacion">
-    <button type="submit">Registrarse</button>
-  </div>
-</form>
-</center>
-  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-</div>
-<!-- Modal -->
-<!-- Modals sesion -->
-<div id="Log" class="reveal-modal small" data-reveal aria-labelledby="LogTitle" aria-hidden="true" role="dialog">
-  <h3 id="LogTitle">Iniciar Sesión</h3>
-  <hr>
-  <center>
-  <img src="img/reg.png" alt="" width="100" height="100" class="img-circle" />
-  <form>
-  <div>    
-    <label>Correo</label>
-    <input type="text" id="sign-in-form-correo">
-    <label>Usuario</label>
-    <input type="text" id="sign-in-form-user">
-    <button type="submit">Iniciar Sesión</button>
-  </div>
-</form>
 </center>
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
@@ -188,6 +141,19 @@ $contrasena = $_SESSION['contrasena'];
   <img src="img/cb.jpg" alt="" width="200" height="200" class="img-circle" />
   <h3>Horarios</h3>
   <span><strong>Asesorías: </strong></span>
+  <!--modificar paga jalar la tabla de asesorias y conexion a la base datos-->
+  <?php 
+  $link = mysql_connect("localhost", ""); 
+  mysql_select_db("asesorias", $link);  
+  $result = mysql_query("SELECT nombre FROM asesorias", $link); 
+  echo "<table border = '1'> \n"; 
+  echo "<tr><td>maestro</td><td>salon</td></tr> \n"; 
+  while ($row = mysql_fetch_row($result)){ 
+       echo "<tr><td>$row[0]</td><td>$row[1]</td><td><ul class="social-network social-circle"><li><a href="" class="icoThumb-up fondo" title="Facebook"><i class="fa fa-thumbs-up"></i></a></li>
+          <li><a href="" class="icoThumb-down fondo" title="Twitter"><i class="fa fa-thumbs-down"></i></a></li></ul></td></tr> \n"; } 
+  echo "</table> \n"; 
+  ?> 
+ 
 </center>
 <hr>
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
