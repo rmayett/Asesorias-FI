@@ -44,19 +44,23 @@ if (isset($_REQUEST['registrar']) ){
 				<div class="login-group">
 					<div class="form-group">
 						<label for="reg_correo" class="sr-only">Correo</label>
-						<input type="text" class="form-control" id="reg_correo" name="correo" placeholder="usuario">
+						<input type="text" class="form-control" id="reg_correo" name="correo" placeholder="Correo">
+					</div>
+					<div class="form-group">
+						<label for="reg_gen" class="sr-only">Generación</label>
+						<input type="text" class="form-control" id="reg_gen" name="generacion" placeholder="Generación">
 					</div>
 					<div class="form-group">
 						<label for="reg_username" class="sr-only">Usuario</label>
-						<input type="text" class="form-control" id="reg_username" name="usuario" placeholder="usuario">
+						<input type="text" class="form-control" id="reg_username" name="usuario" placeholder="Usuario">
 					</div>
 					<div class="form-group">
 						<label for="reg_password" class="sr-only">Contraseña</label>
-						<input type="password" class="form-control" id="reg_password" name="contrasena" placeholder="contraseña">
+						<input type="password" class="form-control" id="reg_password" name="contrasena" placeholder="Contraseña">
 					</div>
 					<div class="form-group">
 						<label for="reg_password_confirm" class="sr-only">Confirme Contraseña</label>
-						<input type="password" class="form-control" id="reg_password_confirm" name="contrasenaConfirmar" placeholder="confirme contraseña">
+						<input type="password" class="form-control" id="reg_password_confirm" name="contrasenaConfirmar" placeholder="Confirme Contraseña">
 					</div>
 					
 					<div class="form-group login-group-checkbox">
