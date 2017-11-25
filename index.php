@@ -126,13 +126,8 @@ $contrasena = $_SESSION['contrasena'];
         Powered by <a href="http://rmayett27.azurewebsites.net/">BestIt Solutions</a>
       </p>
     </div>
-</div>
 
-</div>
-</center>
-  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-</div>
-<!-- Modal -->
+
 <!-- Modals CienciasB -->
 <div id="Ciencias" class="reveal-modal medium" data-reveal aria-labelledby="CienciasTitle" aria-hidden="true" role="dialog">
   <h3 id="CienciasTitle">Ciencias Básicas</h3>
