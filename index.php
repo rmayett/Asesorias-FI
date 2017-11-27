@@ -144,7 +144,6 @@ $contrasena = $_SESSION['contrasena'];
        echo '<tr><td>$row[0]</td><td>$row[1]</td><td><ul class="social-network social-circle"><li><a href="" class="icoThumb-up fondo" title="Facebook"><i class="fa fa-thumbs-up"></i></a></li><li><a href="" class="icoThumb-down fondo" title="Twitter"><i class="fa fa-thumbs-down"></i></a></li></ul></td></tr> \n'; } 
   echo "</tbody></table> \n"; 
   ?> 
- 
 </center>
 <hr>
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
@@ -157,7 +156,15 @@ $contrasena = $_SESSION['contrasena'];
   <center>
   <img src="img/prog.jpg" alt="" width="200" height="200" class="img-circle" />
   <h3>Horarios</h3>
-  <span><strong>Asesorías: </strong></span>
+  <?php 
+  $link = mysql_connect('localhost','root','312043490Rm!','aps');   
+  $result = mysql_query("SELECT * FROM ALUMNOS", $link); 
+  echo '<table class="uk-table"><caption>Asesorías</caption> '; 
+  echo "<thead><tr><td>Maestro</td><td>Salon</td></tr></thead><tbody> \n"; 
+  while ($row = mysql_fetch_row($result)){ 
+       echo '<tr><td>$row[0]</td><td>$row[1]</td><td><ul class="social-network social-circle"><li><a href="" class="icoThumb-up fondo" title="Facebook"><i class="fa fa-thumbs-up"></i></a></li><li><a href="" class="icoThumb-down fondo" title="Twitter"><i class="fa fa-thumbs-down"></i></a></li></ul></td></tr> \n'; } 
+  echo "</tbody></table> \n"; 
+  ?>
 </center>
 <hr>
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
@@ -170,7 +177,15 @@ $contrasena = $_SESSION['contrasena'];
   <center>
   <img src="img/elec.jpg" alt="" width="200" height="200" class="img-circle" />
   <h3>Horarios</h3>
-  <span><strong>Asesorías: </strong></span>
+  <?php 
+  $link = mysql_connect('localhost','root','312043490Rm!','aps');   
+  $result = mysql_query("SELECT * FROM ALUMNOS", $link); 
+  echo '<table class="uk-table"><caption>Asesorías</caption> '; 
+  echo "<thead><tr><td>Maestro</td><td>Salon</td></tr></thead><tbody> \n"; 
+  while ($row = mysql_fetch_row($result)){ 
+       echo '<tr><td>$row[0]</td><td>$row[1]</td><td><ul class="social-network social-circle"><li><a href="" class="icoThumb-up fondo" title="Facebook"><i class="fa fa-thumbs-up"></i></a></li><li><a href="" class="icoThumb-down fondo" title="Twitter"><i class="fa fa-thumbs-down"></i></a></li></ul></td></tr> \n'; } 
+  echo "</tbody></table> \n"; 
+  ?>
 </center>
 <hr>
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
@@ -183,7 +198,15 @@ $contrasena = $_SESSION['contrasena'];
   <center>
   <img src="img/ch.jpg" alt="" width="200" height="200" class="img-circle" />
   <h3>Horarios</h3>
-  <span><strong>Asesorías: </strong></span>
+  <?php 
+  $link = mysql_connect('localhost','root','312043490Rm!','aps');   
+  $result = mysql_query("SELECT * FROM ALUMNOS", $link); 
+  echo '<table class="uk-table"><caption>Asesorías</caption> '; 
+  echo "<thead><tr><td>Maestro</td><td>Salon</td></tr></thead><tbody> \n"; 
+  while ($row = mysql_fetch_row($result)){ 
+       echo '<tr><td>$row[0]</td><td>$row[1]</td><td><ul class="social-network social-circle"><li><a href="" class="icoThumb-up fondo" title="Facebook"><i class="fa fa-thumbs-up"></i></a></li><li><a href="" class="icoThumb-down fondo" title="Twitter"><i class="fa fa-thumbs-down"></i></a></li></ul></td></tr> \n'; } 
+  echo "</tbody></table> \n"; 
+  ?>
 </center>
 <hr>
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
