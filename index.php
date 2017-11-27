@@ -63,7 +63,7 @@ $contrasena = $_SESSION['contrasena'];
        <div class="large-12 columns">
           <div class="row">
             <div class="large-3 small-6 columns">
-               <a href="#" data-reveal-id="Ciencias"> <img src="img/cb.jpg" class="pure-img-responsive" data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true}"/></a>
+               <a href="#" data-reveal-id="Ciencias"> <img src="img/cb.JPG" class="pure-img-responsive" data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true}"/></a>
                 <h6 class="panel"><a href="#" data-reveal-id="Ciencias" data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true}">Ciencias Básicas</a></h6>
             </div>
             <div class="large-3 small-6 columns">
@@ -135,18 +135,14 @@ $contrasena = $_SESSION['contrasena'];
   <center>
   <img src="img/cb.jpg" alt="" width="200" height="200" class="img-circle" />
   <h3>Horarios</h3>
-  <span><strong>Asesorías: </strong></span>
-  <!--modificar paga jalar la tabla de asesorias y conexion a la base datos-->
   <?php 
-  $link = mysql_connect("localhost", ""); 
-  mysql_select_db("asesorias", $link);  
-  $result = mysql_query("SELECT nombre FROM asesorias", $link); 
-  echo "<table border = '1'> \n"; 
-  echo "<tr><td>maestro</td><td>salon</td></tr> \n"; 
+  $link = mysql_connect('localhost','root','312043490Rm!','aps');   
+  $result = mysql_query("SELECT * FROM ALUMNOS", $link); 
+  echo '<table class="uk-table"><caption>Asesorías</caption> '; 
+  echo "<thead><tr><td>Maestro</td><td>Salon</td></tr></thead><tbody> \n"; 
   while ($row = mysql_fetch_row($result)){ 
-       echo "<tr><td>$row[0]</td><td>$row[1]</td><td><ul class="social-network social-circle"><li><a href="" class="icoThumb-up fondo" title="Facebook"><i class="fa fa-thumbs-up"></i></a></li>
-          <li><a href="" class="icoThumb-down fondo" title="Twitter"><i class="fa fa-thumbs-down"></i></a></li></ul></td></tr> \n"; } 
-  echo "</table> \n"; 
+       echo '<tr><td>$row[0]</td><td>$row[1]</td><td><ul class="social-network social-circle"><li><a href="" class="icoThumb-up fondo" title="Facebook"><i class="fa fa-thumbs-up"></i></a></li><li><a href="" class="icoThumb-down fondo" title="Twitter"><i class="fa fa-thumbs-down"></i></a></li></ul></td></tr> \n'; } 
+  echo "</tbody></table> \n"; 
   ?> 
  
 </center>

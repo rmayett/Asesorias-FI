@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';
 $user = 'root';
-$pass = '';
-$base_de_datos = 'asesorias';
+$pass = '312043490Rm!';
+$base_de_datos = 'aps';
 
 $conexion = new mysqli($host, $user, $pass, $base_de_datos);
 ?>
