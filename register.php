@@ -6,10 +6,12 @@ require 'conexion.php';
 if (isset($_REQUEST['registrar']) ){
 	if ($_REQUEST['contrasena'] === $_REQUEST['contrasenaConfirmar']) {
 	$usuario = $_REQUEST['usuario'];
-	$password = $_REQUEST['contrasena'];	
+	$password = $_REQUEST['contrasena'];
+	$nombre = $_REQUEST['nombre'];
+	$correo = $_REQUEST['correo']
 
 	$encriptar = password_hash($password, PASSWORD_BCRYPT, ["cost" => '11']);
-	$conexion->query("INSERT INTO ALUMNO (USUARIO, CONTRASENA) VALUES ('$usuario', '$encriptar')");
+	$conexion->query("INSERT INTO ALUMNO (USUARIO, CONTRASENA, NOMBRE, CORREO) VALUES ('$usuario', '$encriptar', '$nombre', '$correo')");
 	$_SESSION['logged'] = "Logged";
 	$_SESSION['usuario'] = $usuario;
 	$_SESSION['contrasena'] = $encriptar;
@@ -44,7 +46,7 @@ if (isset($_REQUEST['registrar']) ){
 				<div class="login-group">
 					<div class="form-group">
 						<label for="reg_name" class="sr-only">Nombre</label>
-						<input type="text" class="form-control" id="reg_name" name="usuario" placeholder="Nombre">
+						<input type="text" class="form-control" id="reg_name" name="nombre" placeholder="Nombre">
 					</div>
 					<div class="form-group">
 						<label for="reg_correo" class="sr-only">Correo</label>
