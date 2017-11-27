@@ -11,7 +11,7 @@ $contrasena = $_SESSION['contrasena'];
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <title>Asesorías Facultad de Ingeniería</title>
   <link rel="shortcut icon" href="https://www.unam.mx/sites/default/files/favicon_0.ico" type="image/vnd.microsoft.icon" />
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/sites/all/themes/unam/apple_icon.png" /> 
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/escudo_fi_color.png" /> 
   <link rel="stylesheet" href="css/menu.css">
   <link rel="stylesheet" type="text/css" href="css/estilos.css">
   <link rel="stylesheet" href="css/uikit.css">

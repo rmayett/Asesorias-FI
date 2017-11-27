@@ -1,7 +1,7 @@
 CACHE MANIFEST
 css/menu.css
 index.php
-index.html
+img/escudo_fi_color.png
 css/foundation.css
 css/foundation.min.css
 css/normalize.css
@@ -17,3 +17,4 @@ img/elec.jpg
 img/fib.png
 img/prog.jpg
 img/reg.png
+https://maps.googleapis.com/maps/api/js?key=AIzaSyAM7XSGE6WzWrRFPcMZfrhud02TdJlxowU&callback=initMap

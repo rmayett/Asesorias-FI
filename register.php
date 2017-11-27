@@ -26,7 +26,7 @@ if (isset($_REQUEST['registrar']) ){
 <head>
 	<meta charset="UTF-8">
 	<link rel="shortcut icon" href="https://www.unam.mx/sites/default/files/favicon_0.ico" type="image/vnd.microsoft.icon" />
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/sites/all/themes/unam/apple_icon.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/escudo_fi_color.png" />
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>Registrarse</title>
 	<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
