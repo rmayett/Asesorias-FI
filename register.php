@@ -8,7 +8,7 @@ if (isset($_REQUEST['registrar']) ){
 	$usuario = $_REQUEST['usuario'];
 	$password = $_REQUEST['contrasena'];
 	$nombre = $_REQUEST['nombre'];
-	$correo = $_REQUEST['correo']
+	$correo = $_REQUEST['correo'];
 
 	$encriptar = password_hash($password, PASSWORD_BCRYPT, ["cost" => '11']);
 	$conexion->query("INSERT INTO ALUMNO (USUARIO, CONTRASENA, NOMBRE, CORREO) VALUES ('$usuario', '$encriptar', '$nombre', '$correo')");
