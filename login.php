@@ -10,8 +10,8 @@ if (isset($_REQUEST['iniciar'])) {
 
 	$sql = $conexion->query("SELECT * FROM ALUMNO WHERE USUARIO='$usuario'");
 	while ($login = $sql->fetch_assoc()) {
-		$usuarioDB = $login['usuario'];
-		$passwordDB = $login['contrasena'];
+		$usuarioDB = $login['USUARIO'];
+		$passwordDB = $login['CONTRASENA'];
 	}
 	if ($usuario == isset($usuarioDB) && password_verify($password, $passwordDB)) {
 		$_SESSION['logged'] = "Logged";
@@ -50,11 +50,11 @@ if (isset($_REQUEST['iniciar'])) {
 				<div class="login-group">
 					<div class="form-group">
 						<label for="lg_username" class="sr-only">Username</label>
-						<input type="text" class="form-control" id="lg_username" name="usuario" placeholder="usuario" required="">
+						<input type="text" class="form-control" id="lg_username" name="usuario" placeholder="Usuario" required="">
 					</div>
 					<div class="form-group">
 						<label for="lg_password" class="sr-only">Password</label>
-						<input type="password" class="form-control" id="lg_password" name="contrasena" placeholder="contraseña" required="">
+						<input type="password" class="form-control" id="lg_password" name="contrasena" placeholder="Contraseña" required="">
 					</div>
 					<div class="form-group login-group-checkbox">
 						<input type="checkbox" id="lg_remember" name="lg_remember">
