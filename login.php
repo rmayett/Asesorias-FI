@@ -8,7 +8,7 @@ if (isset($_REQUEST['iniciar'])) {
 	$usuario = $_REQUEST['usuario'];
 	$password = $_REQUEST['contrasena'];
 
-	$sql = $conexion->query("SELECT * FROM usuarios WHERE usuario='$usuario'");
+	$sql = $conexion->query("SELECT * FROM ALUMNOS WHERE USUARIO='$usuario'");
 	while ($login = $sql->fetch_assoc()) {
 		$usuarioDB = $login['usuario'];
 		$passwordDB = $login['contrasena'];
