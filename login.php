@@ -8,7 +8,7 @@ if (isset($_REQUEST['iniciar'])) {
 	$usuario = $_REQUEST['usuario'];
 	$password = $_REQUEST['contrasena'];
 
-	$sql = $conexion->query("SELECT * FROM ALUMNOS WHERE USUARIO='$usuario'");
+	$sql = $conexion->query("SELECT * FROM ALUMNO WHERE USUARIO='$usuario'");
 	while ($login = $sql->fetch_assoc()) {
 		$usuarioDB = $login['usuario'];
 		$passwordDB = $login['contrasena'];
@@ -58,13 +58,13 @@ if (isset($_REQUEST['iniciar'])) {
 					</div>
 					<div class="form-group login-group-checkbox">
 						<input type="checkbox" id="lg_remember" name="lg_remember">
-						<label for="lg_remember">recordar</label>
+						<label for="lg_remember">Recordar</label>
 					</div>
 				</div>
 				<button type="submit" class="login-button" name="iniciar"><i class="fa fa-chevron-right"></i></button>
 			</div>
 			<div class="etc-login-form">
-				<p>nuevo usuario? <a href="register.php">cree una nueva cuenta</a></p>
+				<p>¿Nuevo Usuario? <a href="register.php">Cree una nueva cuenta</a></p>
 			</div>
 		</form>
 	</div>

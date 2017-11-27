@@ -6,10 +6,10 @@ require 'conexion.php';
 if (isset($_REQUEST['registrar']) ){
 	if ($_REQUEST['contrasena'] === $_REQUEST['contrasenaConfirmar']) {
 	$usuario = $_REQUEST['usuario'];
-	$password = $_REQUEST['contrasena'];
+	$password = $_REQUEST['contrasena'];	
 
 	$encriptar = password_hash($password, PASSWORD_BCRYPT, ["cost" => '11']);
-	$conexion->query("INSERT INTO usuarios (usuario, contrasena) VALUES ('$usuario', '$encriptar')");
+	$conexion->query("INSERT INTO ALUMNO (USUARIO, CONTRASENA) VALUES ('$usuario', '$encriptar')");
 	$_SESSION['logged'] = "Logged";
 	$_SESSION['usuario'] = $usuario;
 	$_SESSION['contrasena'] = $encriptar;
@@ -43,6 +43,10 @@ if (isset($_REQUEST['registrar']) ){
 			<div class="main-login-form">
 				<div class="login-group">
 					<div class="form-group">
+						<label for="reg_name" class="sr-only">Nombre</label>
+						<input type="text" class="form-control" id="reg_name" name="usuario" placeholder="Nombre">
+					</div>
+					<div class="form-group">
 						<label for="reg_correo" class="sr-only">Correo</label>
 						<input type="text" class="form-control" id="reg_correo" name="correo" placeholder="Correo">
 					</div>
@@ -71,7 +75,7 @@ if (isset($_REQUEST['registrar']) ){
 				<button type="submit" class="login-button" name="registrar"><i class="fa fa-chevron-right"></i></button>
 			</div>
 			<div class="etc-login-form">
-				<p>Ya tiene una cuenta? <a href="login.php">Login Aquí</a></p>
+				<p>¿Ya tiene una cuenta? <a href="login.php">Login Aquí</a></p>
 			</div>
 		</form>
 	</div>
