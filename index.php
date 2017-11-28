@@ -152,15 +152,11 @@ $contrasena = $_SESSION['contrasena'];
   <center>
   <img src="img/prog.jpg" alt="" width="200" height="200" class="img-circle" />
   <h3>Horarios</h3>
-  <?php 
-  $link = mysql_connect('localhost','root','312043490Rm!','aps');   
-  $result = mysql_query("SELECT * FROM PROFESOR", $link); 
-  echo '<table class="uk-table"><caption>Asesorías</caption> '; 
-  echo "<thead><tr><td>Maestro</td><td>Salon</td></tr></thead><tbody> \n"; 
-  while ($row = mysql_fetch_row($result)){ 
-       echo "<tr><td>$row[0]</td><td>$row[1]</td>"; } 
-  echo "</tbody></table> \n"; 
-  ?>
+  <table class="uk-table"><caption>Asesorías</caption> '; 
+<thead><tr><td>Maestro</td><td>Salon</td><td>Materia</td><td>Horario</td><td>Calificalos</td></tr></thead><tbody>
+<tr><td>Hernandez Moreno Luis</td><td>L-V</td><td>ECS Diferenciales</td><td>16:30-18</td><td><ul class="social-network social-circle"><li><a href="" class="icoThumb-up fondo" title="Facebook"><i class="fa fa-thumbs-up"></i></a></li><li><a href="" class="icoThumb-down fondo" title="Twitter"><i class="fa fa-thumbs-down"></i></a></li></ul></td></tr> 
+</tbody></table>
+</center>
 </center>
 <hr>
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
