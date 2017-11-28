@@ -137,8 +137,8 @@ $contrasena = $_SESSION['contrasena'];
   <h3>Horarios</h3>
 <table class="uk-table"><caption>Asesorías</caption> 
 <thead><tr><td>Maestro</td><td>Salon</td><td>Materia</td><td>Horario</td><td>Calificalos</td></tr></thead><tbody>
-<tr><td>Segundo Cuevas Felipe</td><td>SJMA</td><td>Algebra</td><td>9-9:30</td><td><ul class="social-network social-circle"><li><a href="" class="icoThumb-up fondo" title="Facebook" data-toggle="modal" data-target=".bs-modal-sm"><i class="fa fa-thumbs-up"></i></a></li><li><a href="" class="icoThumb-down fondo" title="Twitter" data-toggle="modal" data-target=".bs-modal-sm"><i class="fa fa-thumbs-down"></i></a></li></ul></td></tr> 
-<tr><td>Arzamendi Perez Sergio Roberto</td><td>A301</td><td>Calculo</td><td>17-18:30</td><td><ul class="social-network social-circle"><li><a href="" class="icoThumb-up fondo" title="Facebook" data-toggle="modal" data-target=".bs-modal-sm"><i class="fa fa-thumbs-up"></i></a></li><li><a href="" class="icoThumb-down fondo" title="Twitter" data-toggle="modal" data-target=".bs-modal-sm"><i class="fa fa-thumbs-down"></i></a></li></ul></td></tr> 
+<tr><td>Segundo Cuevas Felipe</td><td>SJMA</td><td>Algebra</td><td>9-9:30</td><td><ul class="social-network social-circle"><li><a href="" class="icoThumb-up fondo" title="Facebook"><i class="fa fa-thumbs-up" onclick="myFunction()"></i></a></li><li><a href="" class="icoThumb-down fondo" title="Twitter"><i class="fa fa-thumbs-down" onclick="myFunction()"></i></a></li></ul></td></tr> 
+<tr><td>Arzamendi Perez Sergio Roberto</td><td>A301</td><td>Calculo</td><td>17-18:30</td><td><ul class="social-network social-circle"><li><a href="" class="icoThumb-up fondo" title="Facebook"><i class="fa fa-thumbs-up" onclick="myFunction()"></i></a></li><li><a href="" class="icoThumb-down fondo" title="Twitter"><i class="fa fa-thumbs-down" onclick="myFunction()"></i></a></li></ul></td></tr> 
 </tbody></table>
 </center>
 <hr>
@@ -154,7 +154,7 @@ $contrasena = $_SESSION['contrasena'];
   <h3>Horarios</h3>
   <table class="uk-table"><caption>Asesorías</caption> 
 <thead><tr><td>Maestro</td><td>Salon</td><td>Materia</td><td>Horario</td><td>Calificalos</td></tr></thead><tbody>
-<tr><td>Hernandez Moreno Luis</td><td>L-V</td><td>ECS Diferenciales</td><td>16:30-18</td><td><ul class="social-network social-circle"><li><a href="" class="icoThumb-up fondo" title="Facebook" data-toggle="modal" data-target=".bs-modal-sm"><i class="fa fa-thumbs-up"></i></a></li><li><a href="" class="icoThumb-down fondo" title="Twitter" data-toggle="modal" data-target=".bs-modal-sm"><i class="fa fa-thumbs-down"></i></a></li></ul></td></tr> 
+<tr><td>Hernandez Moreno Luis</td><td>L-V</td><td>ECS Diferenciales</td><td>16:30-18</td><td><ul class="social-network social-circle"><li><a href="" class="icoThumb-up fondo" title="Facebook"><i class="fa fa-thumbs-up" onclick="myFunction()"></i></a></li><li><a href="" class="icoThumb-down fondo" title="Twitter"><i class="fa fa-thumbs-down" onclick="myFunction()"></i></a></li></ul></td></tr> 
 </tbody></table>
 </center>
 </center>
@@ -205,19 +205,11 @@ $contrasena = $_SESSION['contrasena'];
 </div>
 <!-- Modal -->
 
-<div class="modal fade bs-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Atención</h4>
-      </div>
-      <div class="modal-body">
-        <div class="alert alert-danger" role="alert"><span class="glyphicon glyphicon-flash" aria-hidden="true"></span>Servicio No Disponible</div>
-    </div>
-  </div>
-</div>
-</div>
+<script>
+function myFunction() {
+    alert("No Disponible");
+}
+</script>
 
 
 
