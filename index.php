@@ -136,8 +136,9 @@ $contrasena = $_SESSION['contrasena'];
   <img src="img/cb.JPG" alt="" width="200" height="200" class="img-circle" />
   <h3>Horarios</h3>
 <table class="uk-table"><caption>Asesorías</caption> '; 
-<thead><tr><td>Maestro</td><td>Salon</td><td>Materia</td><td>Calificalos</td></tr></thead><tbody>
-<tr><td>Tanya</td><td>A301</td><td>Computación para ingenieros</td><td><ul class="social-network social-circle"><li><a href="" class="icoThumb-up fondo" title="Facebook"><i class="fa fa-thumbs-up"></i></a></li><li><a href="" class="icoThumb-down fondo" title="Twitter"><i class="fa fa-thumbs-down"></i></a></li></ul></td></tr> 
+<thead><tr><td>Maestro</td><td>Salon</td><td>Materia</td><td>Horario</td><td>Calificalos</td></tr></thead><tbody>
+<tr><td>Segundo Cuevas Felipe</td><td>SJMA</td><td>Algebra</td><td>9-9:30</td><td><ul class="social-network social-circle"><li><a href="" class="icoThumb-up fondo" title="Facebook"><i class="fa fa-thumbs-up"></i></a></li><li><a href="" class="icoThumb-down fondo" title="Twitter"><i class="fa fa-thumbs-down"></i></a></li></ul></td></tr> 
+<tr><td>Arzamendi Perez Sergio Roberto</td><td>A301</td><td>Calculo</td><td>17-18:30</td><td><ul class="social-network social-circle"><li><a href="" class="icoThumb-up fondo" title="Facebook"><i class="fa fa-thumbs-up"></i></a></li><li><a href="" class="icoThumb-down fondo" title="Twitter"><i class="fa fa-thumbs-down"></i></a></li></ul></td></tr> 
 </tbody></table>
 </center>
 <hr>
