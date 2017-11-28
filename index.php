@@ -133,17 +133,12 @@ $contrasena = $_SESSION['contrasena'];
   <h3 id="CienciasTitle">Ciencias Básicas</h3>
   <hr>
   <center>
-  <img src="img/cb.jpg" alt="" width="200" height="200" class="img-circle" />
+  <img src="img/cb.JPG" alt="" width="200" height="200" class="img-circle" />
   <h3>Horarios</h3>
-  <?php 
-  $link = mysql_connect('localhost','root','312043490Rm!','aps');   
-  $result = mysql_query("SELECT * FROM ALUMNOS", $link); 
-  echo '<table class="uk-table"><caption>Asesorías</caption> '; 
-  echo "<thead><tr><td>Maestro</td><td>Salon</td></tr></thead><tbody> \n"; 
-  while ($row = mysql_fetch_row($result)){ 
-       echo '<tr><td>$row[0]</td><td>$row[1]</td><td><ul class="social-network social-circle"><li><a href="" class="icoThumb-up fondo" title="Facebook"><i class="fa fa-thumbs-up"></i></a></li><li><a href="" class="icoThumb-down fondo" title="Twitter"><i class="fa fa-thumbs-down"></i></a></li></ul></td></tr> \n'; } 
-  echo "</tbody></table> \n"; 
-  ?> 
+<table class="uk-table"><caption>Asesorías</caption> '; 
+<thead><tr><td>Maestro</td><td>Salon</td><td>Materia</td><td>Calificalos</td></tr></thead><tbody>
+<tr><td>Tanya</td><td>A301</td><td>Computación para ingenieros</td><td><ul class="social-network social-circle"><li><a href="" class="icoThumb-up fondo" title="Facebook"><i class="fa fa-thumbs-up"></i></a></li><li><a href="" class="icoThumb-down fondo" title="Twitter"><i class="fa fa-thumbs-down"></i></a></li></ul></td></tr> 
+</tbody></table>
 </center>
 <hr>
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
@@ -158,11 +153,11 @@ $contrasena = $_SESSION['contrasena'];
   <h3>Horarios</h3>
   <?php 
   $link = mysql_connect('localhost','root','312043490Rm!','aps');   
-  $result = mysql_query("SELECT * FROM ALUMNOS", $link); 
+  $result = mysql_query("SELECT * FROM PROFESOR", $link); 
   echo '<table class="uk-table"><caption>Asesorías</caption> '; 
   echo "<thead><tr><td>Maestro</td><td>Salon</td></tr></thead><tbody> \n"; 
   while ($row = mysql_fetch_row($result)){ 
-       echo '<tr><td>$row[0]</td><td>$row[1]</td><td><ul class="social-network social-circle"><li><a href="" class="icoThumb-up fondo" title="Facebook"><i class="fa fa-thumbs-up"></i></a></li><li><a href="" class="icoThumb-down fondo" title="Twitter"><i class="fa fa-thumbs-down"></i></a></li></ul></td></tr> \n'; } 
+       echo "<tr><td>$row[0]</td><td>$row[1]</td>"; } 
   echo "</tbody></table> \n"; 
   ?>
 </center>
