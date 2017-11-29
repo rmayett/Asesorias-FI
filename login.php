@@ -16,7 +16,7 @@ if (isset($_REQUEST['iniciar'])) {
 		$_SESSION['logged'] = "Logged";
 		$_SESSION['usuario'] = $usuarioDB;
 		$_SESSION['contrasena'] = $passwordDB;
-		header("Location: index.php");
+		header("Location: indexl.php");
 	} elseif ($usuario !== "gekko") {
 		echo "<div class='error'><span>El Nombre de Usuario que has Introducido es Incorrecto</span></div>";
 	} elseif (password !== "12345") {

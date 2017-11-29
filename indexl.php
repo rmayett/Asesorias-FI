@@ -1,5 +1,8 @@
 <?php
+session_start();
 require 'conexion.php';
+$usuario = $_SESSION['usuario'];
+$contrasena = $_SESSION['contrasena'];
 ?>
 <!DOCTYPE html>
 <html lang="es" manifest="aps.appcache">

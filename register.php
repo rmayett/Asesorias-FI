@@ -15,7 +15,7 @@ if (isset($_REQUEST['registrar']) ){
 	$_SESSION['logged'] = "Logged";
 	$_SESSION['usuario'] = $usuario;
 	$_SESSION['contrasena'] = $encriptar;
-	header("Location: index.php");
+	header("Location: indexl.php");
 	} else {
 		echo "<div class='error'><span>Las Contraseñas no son iguales</span></div>";
 	}
