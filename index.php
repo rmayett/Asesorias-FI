@@ -47,8 +47,15 @@ $contrasena = $_SESSION['contrasena'];
           <div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked" id="tuckedMenu">
               <div class="custom-menu-screen"></div>
               <ul class="pure-menu-list">
-                  <li class="pure-menu-item"><a href="register.php" class="pure-menu-link">Registrarse</a></li>
-                  <li class="pure-menu-item"><a href="login.php" class="pure-menu-link">Iniciar Sesión</a></li>               
+                <?php
+                  if (isset($_SESSION['logged']) === FALSE) {
+                   echo '<li class="pure-menu-item"><a href="register.php" class="pure-menu-link">Registrarse</a></li>';
+                   echo '<li class="pure-menu-item"><a href="login.php" class="pure-menu-link">Iniciar Sesión</a></li>' ;               
+                  }else{
+                   echo '<li class="pure-menu-item"><a href="#" class="pure-menu-link">'.$usuario.'</a></li>';
+                   echo '<li class="pure-menu-item"><a href="salir.php" class="pure-menu-link">Salir</a></li>';                    
+                  }
+                  ?>                   
               </ul>
           </div>
       </div>
@@ -137,8 +144,8 @@ $contrasena = $_SESSION['contrasena'];
   <h3>Horarios</h3>
 <table class="uk-table"><caption>Asesorías</caption> 
 <thead><tr><td>Maestro</td><td>Salon</td><td>Materia</td><td>Horario</td><td>Calificalos</td></tr></thead><tbody>
-<tr><td>Segundo Cuevas Felipe</td><td>SJMA</td><td>Algebra</td><td>9-9:30</td><td><ul class="social-network social-circle"><li><a href="" class="icoThumb-up fondo" title="Facebook"><i class="fa fa-thumbs-up" onclick="myFunction()"></i></a></li><li><a href="" class="icoThumb-down fondo" title="Twitter"><i class="fa fa-thumbs-down" onclick="myFunction()"></i></a></li></ul></td></tr> 
-<tr><td>Arzamendi Perez Sergio Roberto</td><td>A301</td><td>Calculo</td><td>17-18:30</td><td><ul class="social-network social-circle"><li><a href="" class="icoThumb-up fondo" title="Facebook"><i class="fa fa-thumbs-up" onclick="myFunction()"></i></a></li><li><a href="" class="icoThumb-down fondo" title="Twitter"><i class="fa fa-thumbs-down" onclick="myFunction()"></i></a></li></ul></td></tr> 
+<tr><td>Segundo Cuevas Felipe</td><td>SJMA</td><td>Algebra</td><td>9-9:30</td><td><ul class="social-network social-circle"><li><a href="" class="icoThumb-up fondo" title="+"><i class="fa fa-thumbs-up" onclick="myFunction()"></i></a></li><li><a href="" class="icoThumb-down fondo" title="-"><i class="fa fa-thumbs-down" onclick="myFunction()"></i></a></li></ul></td></tr> 
+<tr><td>Arzamendi Perez Sergio Roberto</td><td>A301</td><td>Calculo</td><td>17-18:30</td><td><ul class="social-network social-circle"><li><a href="" class="icoThumb-up fondo" title="+"><i class="fa fa-thumbs-up" onclick="myFunction()"></i></a></li><li><a href="" class="icoThumb-down fondo" title="-"><i class="fa fa-thumbs-down" onclick="myFunction()"></i></a></li></ul></td></tr> 
 </tbody></table>
 </center>
 <hr>
@@ -154,7 +161,7 @@ $contrasena = $_SESSION['contrasena'];
   <h3>Horarios</h3>
   <table class="uk-table"><caption>Asesorías</caption> 
 <thead><tr><td>Maestro</td><td>Salon</td><td>Materia</td><td>Horario</td><td>Calificalos</td></tr></thead><tbody>
-<tr><td>Hernandez Moreno Luis</td><td>L-V</td><td>ECS Diferenciales</td><td>16:30-18</td><td><ul class="social-network social-circle"><li><a href="" class="icoThumb-up fondo" title="Facebook"><i class="fa fa-thumbs-up" onclick="myFunction()"></i></a></li><li><a href="" class="icoThumb-down fondo" title="Twitter"><i class="fa fa-thumbs-down" onclick="myFunction()"></i></a></li></ul></td></tr> 
+<tr><td>Hernandez Moreno Luis</td><td>L-V</td><td>ECS Diferenciales</td><td>16:30-18</td><td><ul class="social-network social-circle"><li><a href="" class="icoThumb-up fondo" title="+"><i class="fa fa-thumbs-up" onclick="myFunction()"></i></a></li><li><a href="" class="icoThumb-down fondo" title="-"><i class="fa fa-thumbs-down" onclick="myFunction()"></i></a></li></ul></td></tr> 
 </tbody></table>
 </center>
 </center>
@@ -169,10 +176,10 @@ $contrasena = $_SESSION['contrasena'];
   <center>
   <img src="img/elec.jpg" alt="" width="200" height="200" class="img-circle" />
   <h3>Horarios</h3>
-  <table class="uk-table"><caption>Asesorías</caption> '; 
+  <table class="uk-table"><caption>Asesorías</caption>  
   <thead><tr><td>Maestro</td><td>Salon</td><td>Materia</td><td>Horario</td><td>Calificalos</td></tr></thead><tbody>
-  <tr><td></td><td>Vicente Flores</td><td>Diseño de Sistemas</td><td>9-9:30</td><td><ul class="social-network social-circle"><li><a href="" class="icoThumb-up fondo" title="Facebook"><i class="fa fa-thumbs-up"></i></a></li><li><a href="" class="icoThumb-down fondo" title="Twitter"><i class="fa fa-thumbs-down"></i></a></li></ul></td></tr> 
-  <tr><td></td><td>Maria del Socorro</td><td>Dispositivos Electricos Electronicos</td><td>17-18:30</td><td><ul class="social-network social-circle"><li><a href="" class="icoThumb-up fondo" title="Facebook"><i class="fa fa-thumbs-up"></i></a></li><li><a href="" class="icoThumb-down fondo" title="Twitter"><i class="fa fa-thumbs-down"></i></a></li></ul></td></tr> 
+  <tr><td></td><td>Vicente Flores</td><td>J201</td><td>Diseño de Sistemas</td><td>9-9:30</td><td><ul class="social-network social-circle"><li><a href="" class="icoThumb-up fondo" title="+"><i class="fa fa-thumbs-up"></i></a></li><li><a href="" class="icoThumb-down fondo" title="-"><i class="fa fa-thumbs-down"></i></a></li></ul></td></tr> 
+  <tr><td></td><td>Maria del Socorro</td><td>J210</td><td>Dispositivos Electricos Electronicos</td><td>17-18:30</td><td><ul class="social-network social-circle"><li><a href="" class="icoThumb-up fondo" title="+"><i class="fa fa-thumbs-up"></i></a></li><li><a href="" class="icoThumb-down fondo" title="-"><i class="fa fa-thumbs-down"></i></a></li></ul></td></tr> 
   </tbody></table>
  
 </center>
@@ -187,10 +194,10 @@ $contrasena = $_SESSION['contrasena'];
   <center>
   <img src="img/ch.jpg" alt="" width="200" height="200" class="img-circle" />
   <h3>Horarios</h3>
-  <table class="uk-table"><caption>Asesorías</caption> '; 
+  <table class="uk-table"><caption>Asesorías</caption>  
 <thead><tr><td>Maestro</td><td>Salon</td><td>Materia</td><td>Horario</td><td>Calificalos</td></tr></thead><tbody>
-<tr><td>Maria Selene</td><td>SJMA</td><td>Etica</td><td>1:00-2:30</td><td><ul class="social-network social-circle"><li><a href="" class="icoThumb-up fondo" title="Facebook"><i class="fa fa-thumbs-up"></i></a></li><li><a href="" class="icoThumb-down fondo" title="Twitter"><i class="fa fa-thumbs-down"></i></a></li></ul></td></tr> 
-<tr><td>RUIZ PRIMO MARTINEZ TEHNY CAROLINA LIC</td><td>A304</td><td>Redacción</td><td>15-17:30</td><td><ul class="social-network social-circle"><li><a href="" class="icoThumb-up fondo" title="Facebook"><i class="fa fa-thumbs-up"></i></a></li><li><a href="" class="icoThumb-down fondo" title="Twitter"><i class="fa fa-thumbs-down"></i></a></li></ul></td></tr> 
+<tr><td>Maria Selene</td><td>SJMA</td><td>Etica</td><td>1:00-2:30</td><td><ul class="social-network social-circle"><li><a href="" class="icoThumb-up fondo" title="+"><i class="fa fa-thumbs-up"></i></a></li><li><a href="" class="icoThumb-down fondo" title="-"><i class="fa fa-thumbs-down"></i></a></li></ul></td></tr> 
+<tr><td>RUIZ PRIMO MARTINEZ TEHNY CAROLINA LIC</td><td>A304</td><td>Redacción</td><td>15-17:30</td><td><ul class="social-network social-circle"><li><a href="" class="icoThumb-up fondo" title="+"><i class="fa fa-thumbs-up"></i></a></li><li><a href="" class="icoThumb-down fondo" title="-"><i class="fa fa-thumbs-down"></i></a></li></ul></td></tr> 
 </tbody></table>
 
 </center>
