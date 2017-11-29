@@ -52,7 +52,7 @@ $contrasena = $_SESSION['contrasena'];
                    echo '<li class="pure-menu-item"><a href="register.php" class="pure-menu-link">Registrarse</a></li>';
                    echo '<li class="pure-menu-item"><a href="login.php" class="pure-menu-link">Iniciar Sesión</a></li>' ;               
                   }else{
-                   echo '<li class="pure-menu-item"><a href="#" class="pure-menu-link">'.$usuario.'</a></li>';
+                   echo '<li class="pure-menu-item pure-menu-disabled"><a href="#" class="pure-menu-link">Hola '.$usuario.'</a></li>';
                    echo '<li class="pure-menu-item"><a href="salir.php" class="pure-menu-link">Salir</a></li>';                    
                   }
                   ?>                   
